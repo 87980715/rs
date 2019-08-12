@@ -1,0 +1,13 @@
+CREATE DATABASE `binance` ;
+------------------------------------------------------------------------------------
+CREATE TABLE `liveorderbook` (
+  `quantity` double NOT NULL,
+  `symbol` varchar(6) NOT NULL,
+  `price` double NOT NULL,
+  `status` enum('S','B') NOT NULL,
+  `trading_done` tinyint(1) NOT NULL DEFAULT '0',
+  `order_id` int(20) NOT NULL DEFAULT '-1',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13130 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='add primary key';
+
